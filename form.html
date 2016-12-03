@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient's info</title>
+	<script >
+			function dataFunction(){
+				name = document.getElementById('fullName').value
+				console.log("Name: "+name)
+
+				age = document.getElementById('age').value
+				console.log("Age: "+age)
+
+				gender = document.getElementById('gender').value
+				console.log("Gender: "+gender)
+
+				weight = document.getElementById('weight').value
+				console.log("Weight: "+weight)
+
+				height = document.getElementById('height').value
+				console.log("Height: "+height)
+
+				birthplace = document.getElementById('birthPlace').value
+				console.log("Birthplace: "+birthplace)
+
+				immun = document.getElementById('immunization').value
+				console.log("Immunization: "+immun)
+
+				allerg = document.getElementById('allergies').value
+				console.log("Allergies: "+allerg)
+
+				symp = document.getElementById('problems').value
+				console.log("Problems: "+symp)
+			}
+	</script>
+	<style type="text/css">
+		body{
+			background-color: #24313c;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		p, h1{
+			font-size: 120%;
+			color:#1ab188;
+		}
+		h1{
+			text-align: center;
+			font-size: 60px;
+		}
+		input{
+			height:50px;
+			width:70%;
+			font-size:120%;
+			border:white solid 1px;
+			background-color: #1ab188;
+			color: #3c3c3c;
+			border-radius: 5px;
+			padding-left: 30px;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		input:focus{
+			background-color: #2cffc6;
+			border:white 2px solid;
+		}
+		input:active{
+			background-color:#2cffc6;
+			border:white 2px solid;
+		}
+		button{
+			font-size: 120%;
+			height:40px;
+			width:150px;
+			margin-left:30%;
+			border:white solid 1px;
+			background-color: #5785ff;
+			color: white;
+			border-radius: 5px;
+			margin-top: 10px;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		button:focus{
+			background-color: #2cffc6;
+			border:white 2px solid;
+		}
+		button:hover{
+			background-color: #2cffc6;
+			border:white 2px solid;
+			color:#333;
+		}
+		::-webkit-input-placeholder {
+   			color: rgba(99,99,99,0.7);
+		}
+	</style>
+</head>
+<body>
+	<div id="myContainer"></div>
+	<div id="myAnimation"></div>
+	<h1>Patient's Information:</h1>
+	<form>
+		<p>Please enter the full name of the patient:</p>
+		<input placeholder="Eg. John 'the king and/or lord' Doe" id="fullName" type="text">
+
+		<p>Age:</p>
+		<input placeholder="Eg. 75 years young" id="age" type="text">
+		
+		<p>Gender:</p>
+		<input placeholder="Eg. Left arm is identified as a woman" id="gender" type="text">
+
+		<p>Weight:</p>
+		<input placeholder="Eg. 5 lbs" id="weight" type="text">
+
+		<p>Height</p>
+		<input placeholder="Eg. 900 inches" id="height" type="text">
+		
+		<p>Birthplace</p>
+		<input placeholder="Eg. The sun because he is 'too hot'" id="birthPlace" type="text">
+
+		<p>Immunization</p>
+		<input placeholder="Eg. Believes Vaccine is for the weak" id="immunization" type="text">
+
+		<p>Allergies</p>
+		<input placeholder="Eg. Stupidity" id="allergies" type="text">
+
+		<p>Symptoms / Issues</p>
+		<input placeholder="Eg. No issues, just likes the smell of the hospital" id="problems" type="text">
+	</form>
+	<button onclick="dataFunction()">Submit</button>
+</body>
+</html>
