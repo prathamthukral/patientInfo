@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="shortcut icon" href="doctor_icon.jpg" />
+	<link rel="shortcut icon" href="C:/Users/prath/Pictures/doctor_icon.jpg" />
 	<title>Patient's info</title>
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<script >
-			function dataFunction(){
-				console.clear()
-				name = document.getElementById('fullName').value
-				console.log("Name: "+name)
+		function dataFunction(){
+			console.clear()
+			name = document.getElementById('fullName').value
+			console.log("Name: "+name)
 
-				age = document.getElementById('age').value
-				console.log("Age: "+age)
+			age = document.getElementById('age').value
+			console.log("Age: "+age)
 
-				gender = document.getElementById('gender').value
-				console.log("Gender: "+gender)
+			gender = document.getElementById('gender').value
+			console.log("Gender: "+gender)
 
-				weight = document.getElementById('weight').value
-				console.log("Weight: "+weight)
+			weight = document.getElementById('weight').value
+			console.log("Weight: "+weight)
 
-				height = document.getElementById('height').value
-				console.log("Height: "+height)
+			height = document.getElementById('height').value
+			console.log("Height: "+height)
 
-				birthplace = document.getElementById('birthPlace').value
-				console.log("Birthplace: "+birthplace)
+			birthplace = document.getElementById('birthPlace').value
+			console.log("Birthplace: "+birthplace)
 
-				allerg = document.getElementById('allergies').value
-				console.log("Allergies: "+allerg)
+			immun = document.getElementById('immunization').value
+			console.log("Immunization: "+immun)
 
-				symp = document.getElementById('problems').value
-				console.log("Problems: "+symp)
-			}
+			allerg = document.getElementById('allergies').value
+			console.log("Allergies: "+allerg)
+
+			symp = document.getElementById('problems').value
+			console.log("Problems: "+symp)
+		}
 	</script>
 	<style type="text/css">
 		body{
 			background-color: #24313c;
 			font-family: Tahoma, Geneva, sans-serif;
+		}
+		form,#instructions{
+			margin-left: 5%;
+			margin-bottom: 15px;
+			margin-top: 15px;
 		}
 		p, h1{
 			font-size: 120%;
@@ -46,7 +57,7 @@
 		}
 		input{
 			height:50px;
-			width:70%;
+			width:95%;
 			font-size:120%;
 			border:white solid 1px;
 			background-color: #1ab188;
@@ -87,37 +98,55 @@
 		::-webkit-input-placeholder {
    			color: rgba(99,99,99,0.7);
 		}
+		.navbar{
+			width:90%;
+			margin:auto;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
 	</style>
 </head>
 <body>
-	<div id="myContainer"></div>
-	<div id="myAnimation"></div>
+	<!--Navbar-->
+	<nav class='navbar navbar-default'>
+		<div class="navbar-header">
+			<ul class="nav navbar-nav">
+        		<li class="active"><a href="#">Form<span class="sr-only">(current)</span></a></li>
+        		<li><a href="htdocs/aboutPage.html">About</a></li>
+        	</ul>
+		</div>
+	</nav>
+
 	<h1>Patient's Information:</h1>
 	<form>
 		<p>Please enter the full name of the patient:</p>
-		<input placeholder="Eg. John 'the king and/or lord' Doe" id="fullName" type="text">
+		<input placeholder="Eg. John Doe" id="fullName" type="text">
 
 		<p>Age:</p>
-		<input placeholder="Eg. 75 years young" id="age" type="text">
+		<input placeholder="Eg. 75 years" id="age" type="text">
 		
 		<p>Gender:</p>
-		<input placeholder="Eg. Left arm is identified as a woman" id="gender" type="text">
+		<input placeholder="Eg. Female" id="gender" type="text">
 
 		<p>Weight:</p>
-		<input placeholder="Eg. 5 lbs" id="weight" type="text">
+		<input placeholder="Eg. 150 lbs" id="weight" type="text">
 
 		<p>Height</p>
-		<input placeholder="Eg. 900 inches" id="height" type="text">
+		<input placeholder="Eg. 90 inches" id="height" type="text">
 		
 		<p>Birthplace</p>
-		<input placeholder="Eg. Somewhere over the RAIIINBOWWW" id="birthPlace" type="text">
+		<input placeholder="Eg. Toronto, Canada" id="birthPlace" type="text">
+
+		<p>Immunization</p>
+		<input placeholder="Eg. No Issues" id="immunization" type="text">
 
 		<p>Allergies</p>
-		<input placeholder="Eg. Stupidity" id="allergies" type="text">
+		<input placeholder="Eg. Peanuts" id="allergies" type="text">
 
 		<p>Symptoms / Issues</p>
-		<input placeholder="Eg. No issues, just likes the smell of the hospital" id="problems" type="text">
+		<input placeholder="Eg. Pain in left arm" id="problems" type="text">
 	</form>
 	<button onclick="dataFunction()">Submit</button>
+	<p id="instructions">Check the 'console' to see the results. Right click, and press inspect</p>
 </body>
 </html>
