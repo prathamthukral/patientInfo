@@ -15,30 +15,39 @@
 			console.clear()
 			name = document.getElementById('fullName').value
 			console.log("Name: "+name)
+			document.getElementById('fullName').value='';
 
 			age = document.getElementById('age').value
 			console.log("Age: "+age)
+			document.getElementById('age').value='';
 
 			gender = document.getElementById('gender').value
 			console.log("Gender: "+gender)
+			document.getElementById('gender').value='';
 
 			weight = document.getElementById('weight').value
 			console.log("Weight: "+weight)
+			document.getElementById('weight').value='';
 
 			height = document.getElementById('height').value
 			console.log("Height: "+height)
+			document.getElementById('height').value='';
 
 			birthplace = document.getElementById('birthPlace').value
 			console.log("Birthplace: "+birthplace)
+			document.getElementById('birthPlace').value='';
 
 			immun = document.getElementById('immunization').value
 			console.log("Immunization: "+immun)
+			document.getElementById('immunization').value='';
 
 			allerg = document.getElementById('allergies').value
 			console.log("Allergies: "+allerg)
+			document.getElementById('allergies').value='';
 
 			symp = document.getElementById('problems').value
 			console.log("Problems: "+symp)
+			document.getElementById('problems').value='';
 		}
 
 		function readURL(input) {
@@ -169,6 +178,7 @@
 		<input type='file' onchange="readURL(this);"/>
     	<img id="preview" src="#" alt="Upload your image! (only png, jpg, or gifs!)" style="color: red;" />
 	</form>
+
 	<button onclick="dataFunction()">Submit</button>
 	<p id="instructions">Check the 'console' to see the results. Right click, and press inspect</p>
 </body>
